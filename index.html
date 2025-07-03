@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script>
+// Check if user is authenticated
+if (!sessionStorage.getItem('portfolioAuthenticated')) {
+    window.location.href = 'password-protection.html';
+}
+</script>
 <meta charset="utf-8"><title>Ben's Portfolio</title>
 <meta content="width=device-width, initial-scale=1" name="viewport">
 <link href="css/portfolio_construction.css" rel="stylesheet" type="text/css">
@@ -33,7 +39,6 @@
   <div class="hero section" id="hero">
     <div class="_1 container">
       <div class="hero-left">
-        <div class="bar"></div>
         <h1 class="heading" data-ix="load-down">Benjamin Hedlund</h1>
       </div>
       <div class="hero-img-wrap" data-ix="load-up">
